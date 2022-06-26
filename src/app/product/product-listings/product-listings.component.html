@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="my-class">
+        <h1>おはようございます</h1>
+        <h2>こんにちは</h2>
+    </div>
+    <br>
+    <div class="row">
+        <div *ngFor="let product of products" class="col-sm">
+            <a [routerLink]="['detail', product.id]">
+                <div class=" card" style="width: 18rem;">
+                    <img [src]=product.coverImage>
+                    <div class="card-body">
+                        <p class="card-title">{{ product.title }}</p>
+                        <p class="card-subtitle">{{ product.price}}円</p>
+                        <p class="card-text">{{ product.description }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
